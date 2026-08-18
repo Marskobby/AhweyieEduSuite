@@ -30,7 +30,6 @@ class School extends Model
         'is_active' => 'boolean',
     ];
 
-    
     /**
      * Users belonging to this school.
      */
@@ -45,5 +44,13 @@ class School extends Model
     public function settings(): HasOne
     {
         return $this->hasOne(SchoolSetting::class);
+    }
+
+    /**
+     * Academic years belonging to this school.
+     */
+    public function academicYears(): HasMany
+    {
+        return $this->hasMany(AcademicYear::class);
     }
 }
