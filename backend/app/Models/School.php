@@ -30,6 +30,7 @@ class School extends Model
         'is_active' => 'boolean',
     ];
 
+    
     /**
      * Users belonging to this school.
      */
